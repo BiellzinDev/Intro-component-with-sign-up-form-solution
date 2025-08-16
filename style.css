@@ -173,7 +173,7 @@ input::placeholder{
         border-radius: 15px;
     }
 
-    input:invalid{
+    input:required{
         background-image: url(/images/icon-error.svg);
         background-repeat: no-repeat;
         background-position: bottom 10px right 20px; ;
@@ -182,8 +182,44 @@ input::placeholder{
         color: var(--Red400);
     }
 
-    input::placeholder:invalid{
+    input:placeholder-shown{
         color: var(--Red400);
     }
+
+    .container{
+        height: 100vh;
+    }
+
+    .intro{
+        text-align: center;
+        box-sizing: border-box;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: 90%;
+        margin-left: 10rem;
+    }
+
+    .intro h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .title{
+        width: 80%;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .fundo{
+        align-items: center;
+    }
+
+    .description{
+        width: 80%;
+        text-align: left;
+    }
+
 
 }
