@@ -19,6 +19,11 @@
     width: 85%;
 }
 
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 body{
     font-family: "Poppins";
     font-size: 16px;
@@ -35,9 +40,6 @@ body{
     
 
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-around;
     gap: 1rem;
 }
@@ -51,31 +53,21 @@ body{
 .intro{
     gap: 1.5rem;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: white;
 }
 
 .description{
-    box-sizing: border-box;
-    display: flex;
     justify-content: center;
-    align-items: center;
+
 }
 
 .container{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 2rem;
+    padding-bottom: 2rem;
 }
 
 .free {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     /* height: 5rem; */
     /* background: var(--Purple700); */
@@ -104,9 +96,6 @@ input{
 form{
     padding: 1.5rem;
     gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     
 }
 
@@ -123,12 +112,7 @@ form{
 .form{
     height: fit-content;
     background: #ffff;
-    /* padding: 1rem; */
-    display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -148,7 +132,99 @@ input::placeholder{
     /* text-align:right; */
 }
 
-@media(min-width:1440px){
+@media(min-width:550px){
+    form{
+        width: 100%;
+    }
+}
+
+@media(min-width:740px){
+    .fundo{
+        height: 100dvh;
+    }
+
+    .free{
+        flex-direction: row;
+    }
+
+    .free a br{
+        display: none;
+    }
+
+    form{
+        width: 90%;
+        padding: 3rem 0;
+    }
+
+    input{
+        outline-color: var(--Gray900);
+        border-radius: 15px;
+    }
+
+    input:required{
+        background-image: url(/images/icon-error.svg);
+        background-repeat: no-repeat;
+        background-position: bottom 10px right 20px; ;
+        background-position-y: center;
+        outline-color: var(--Red400);
+        color: var(--Red400);
+    }
+
+    input:placeholder-shown{
+        color: var(--Red400);
+    }
+
+    .container{
+        height: 100dvh;
+    }
+
+    .intro{
+        text-align: center;
+        height: 50dvh;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: 90%;
+    }
+
+    .intro h1{
+
+        font-size: 4rem;
+        line-height: 3rem;
+    }
+
+    .title{
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .fundo{
+        align-items: center;
+    }
+
+    .description{
+        font-size: 1rem;
+        width: 80%;
+    }
+
+}
+
+@media(min-wodth:820px){
+
+    .intro{
+        justify-content: center;
+    }
+    .description{
+        font-size: 4rem;
+    }
+
+    .container{
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+@media(min-width:1280px){
     .fundo{
         flex-direction: row;
         height: 100vh;
@@ -164,8 +240,7 @@ input::placeholder{
 
     form{
         width: 90%;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding: 3rem 0;
     }
 
     input{
@@ -191,14 +266,13 @@ input::placeholder{
     }
 
     .intro{
+        margin: 0 auto;
         text-align: center;
-        box-sizing: border-box;
-        height: 100vh;
+        height: 50vh;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
         gap: 3rem;
         width: 90%;
-        margin-left: 10rem;
     }
 
     .intro h1{
@@ -220,6 +294,4 @@ input::placeholder{
         width: 80%;
         text-align: left;
     }
-
-
 }
